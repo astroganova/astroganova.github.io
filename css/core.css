@@ -1,0 +1,109 @@
+
+/*'Source Sans Pro'*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700&display=swap&subset=cyrillic-ext');
+
+
+/*Custom Fonts*/
+@font-face {
+    font-family: 'ZapfChanceryCTT';
+    src: url('fonts/ZapfChanceryCTT.eot');
+    src: url('fonts/ZapfChanceryCTT.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ZapfChanceryCTT.woff2') format('woff2'),
+        url('fonts/ZapfChanceryCTT.woff') format('woff'),
+        url('fonts/ZapfChanceryCTT.ttf') format('truetype'),
+        url('fonts/ZapfChanceryCTT.svg#ZapfChanceryCTT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Colors*/
+:root {
+    /*main palitra*/
+    --gold: rgb(85, 67, 45);
+    --gold-opacity:rgba(85, 67, 45, 0.5);
+    --blue: rgb(45, 49, 77);
+    --blue-opacity: rgba(45, 49, 77, 0.5);
+    --blue-opacity01: rgba(45, 49, 77, 0.1);
+    --nav-blue-opacity: rgba(45, 49, 77, 0.11);
+    --white: #fff;
+    --gray: rgba(0,0,0,0.05);
+    --white-opacity:rgb(255, 255, 255, 0.8);
+    --beige: #e6e3e0;
+    --black: #000
+    /*usage*/
+
+    /*background color*/
+    --body-bg-color: var(--white);
+    --box-bg-color: var(--white-opacity);
+    --box-before-color-behind:var(--gold);
+    --box-after-color:var(--blue);
+    --nav-before-color:var(--gold-opacity);
+    --nav-after-color:var(--blue-opacity);
+
+
+    /*text color*/
+    --icon-color:var(--gold);
+    --body-color: var(--blue);
+    --title-color-gold: var(--gold);
+    --button-color-hover: var(--gold);
+
+    /*buttons*/
+    --button-border-color: var(--blue);
+    --button-background-color: var(--gray);
+    --button-background-color-hover: var(--beige);
+  }
+
+
+/*Core styles*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    background: var(--body-bg-color);
+    color: var(--body-color);
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+i {
+    color: var(--icon-color);
+}
+
+/*Custom scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold-opacity); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold); 
+  }

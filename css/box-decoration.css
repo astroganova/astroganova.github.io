@@ -1,0 +1,48 @@
+/*box-decoration*/
+.box-decoration, .box-decoration--services {
+    position: relative;
+    background: var(--box-bg-color);
+}
+
+.box-decoration::before, .box-decoration::after
+,.box-decoration--services::before, .box-decoration--services::after
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -3px;
+    z-index: -11;
+}
+
+
+
+
+.box-decoration::after{
+    background: var(--box-after-color); 
+}
+.box-decoration--center::after{
+    width: 33.33%;
+    transform: translateX(100%);
+}
+.box-decoration--left::after{
+    width: 33.33%;
+    transform: translateX(0%);
+}
+
+
+
+.box-decoration--services {
+    background: rgba(0,0,0,0.3);
+}
+.box-decoration--services::before, .box-decoration--services::after{
+    top: 3px;
+}
+.box-decoration--services::before{
+    background: rgba(0,0,0,0.5);
+}
+.box-decoration--services::after{
+    background: var(--blue-opacity);
+    width: 33.33%;
+    transform: translateX(100%);
+}

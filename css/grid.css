@@ -1,0 +1,499 @@
+
+/*Header GRID*/
+
+.main-header__grid{
+    display: grid;
+    grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    padding: 15px 15px;
+    height: 100vh;
+}
+.logo-container{
+    
+    display: grid;
+    
+    grid-template-columns: minmax(auto, 300px);
+}
+.logo{
+    display: inline-block;
+    width: 100%;
+    height: 100vm;
+}
+
+
+
+.main-header__body-grid{
+    display: grid;
+    grid-gap: 10px;
+    padding: 0 20px;
+  
+    grid-template-columns: minmax(auto, 1024px);
+
+}
+
+/*Header nav-bar GRID*/
+.nav-bar__grid{
+    display: grid;
+    grid-gap: 20px;
+    align-content: center;
+    
+}
+
+/*height*/
+@media screen and (max-height: 406px) {
+    .nav-bar__grid{
+        grid-gap: 5px;  
+    }
+  }
+
+
+@media only screen and (min-width: 569px){
+    .logo-container {
+        grid-template-columns: minmax(auto, 350px);
+    }
+    .main-header__body-grid{
+        grid-template-columns: minmax(auto, 500px);
+     }
+}
+
+@media only screen and (min-width: 768px){
+    .logo-container {
+        grid-template-columns: minmax(auto, 550px);
+   }
+   .main-header__body-grid{
+   grid-template-columns: minmax(auto, 700px);
+   }
+
+}
+
+@media only screen and (min-width: 1025px){
+    .logo-container {
+        grid-template-columns: minmax(auto, 650px);
+   }
+
+   .main-header__body-grid{
+    grid-template-columns: minmax(auto, 800px);
+    }
+   
+}
+
+@media only screen and (min-width: 1367px){
+    .logo-container {
+        grid-template-columns: minmax(auto, 700px);
+   }
+
+   .main-header__body-grid{
+    grid-template-columns: minmax(auto, 950px);
+    }
+   
+}
+
+/*Main area*/
+
+/*Most important points, include services*/
+.important-points-grid{
+    display: grid;
+    grid-gap: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    grid-template-columns: 1% 1fr 1%; 
+}
+.speak-english-grid, .dental-equipment-grid{
+    grid-column: 2;
+    display: grid;
+    grid-gap: 20px;
+    padding: 30px;
+    align-items: center;
+}
+
+/*Services*/
+
+.services-grid{
+    grid-column: 2;
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px 0;
+}
+
+.services-list-grid{
+    display: grid;
+    grid-gap: 20px;
+    margin: 0 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+}
+
+@media only screen and (min-width: 426px){
+    .services-list-grid{
+        grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .services-list-grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@media only screen and (min-width: 768px){
+    .services-list-grid{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+
+@media only screen and (min-width: 1440px){
+    
+    .important-points-grid{
+        grid-template-columns: 5% 1fr 1fr 5%; 
+    }
+
+    .speak-english{
+        grid-row: 1;
+        grid-column: 2
+    }
+    .dental-equipment{
+        grid-row: 1;
+        grid-column: 3
+    }
+    .services{
+     grid-row: 2;
+     grid-column: 2 / span 2
+    }
+
+    
+    .box-decoration--center::after{
+        width: 33.33%;
+        transform: translateX(200%); 
+    }
+
+    .speak-english__title{
+        grid-column: 2;
+    }
+    .speak-english__description{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+
+}
+
+.services-item{
+    display: grid;
+    grid-gap: 10px;
+    padding: 30px 15px;
+    align-items: center;
+}
+
+
+/*Doctors*/
+.doctors-grid{
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px 20px 20px 20px;
+}
+.doctors__list-grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1fr, 300px));
+}
+
+@media only screen and (min-width: 427px){
+    .doctors-grid{
+        padding: 5%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .doctors-grid{
+        padding: 10%;
+    }
+}
+
+.doctors__item {
+    display: grid;
+    grid-gap: 5px;
+    padding: 5px 10px;
+    grid-template-areas: 
+    "doctors__name" 
+    "doctors__image"
+    "doctors__info" ;
+    justify-items: center;
+}
+.doctors__name {
+    grid-area: doctors__name;
+}
+
+.doctors__image {
+    grid-area: doctors__image;
+    
+    
+}
+
+.doctors__info {
+    grid-area: doctors__info;
+
+    display: grid;
+    grid-gap: 5px;
+}
+
+
+
+/*Certificates*/
+.certificates{
+    display: grid;
+    grid-gap: 5px;
+    padding-bottom: 5px;
+    
+    
+}
+
+.certificates__tiile, .certificates__descriptions{
+    padding: 25px 5px;
+}
+
+.certificates__list{
+    display: grid;
+    grid-gap: 5px;
+    padding: 0 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+}
+
+@media only screen and (min-width: 768px){
+    .certificates{
+        grid-gap: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .certificates__tiile, .certificates__descriptions{
+        padding: 30px 10px;
+    }
+    
+    .certificates__list{
+        grid-gap: 10px;
+        padding: 0 10px;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .certificates{
+        grid-gap: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .certificates__tiile, .certificates__descriptions{
+        padding: 35px 15px;
+    }
+    
+    .certificates__list{
+        grid-gap: 15px;
+        padding: 0 15px;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .certificates{
+        grid-gap: 30px;
+        padding-bottom: 100px;
+    }
+    
+    .certificates__tiile, .certificates__descriptions{
+        padding: 60px 60px;
+    }
+    
+    .certificates__list{
+        grid-gap: 25px;
+        padding: 0 150px;
+        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    }
+}
+
+
+.certificates__item{
+    display: grid;
+    grid-gap: 5px;
+    padding: 5px;
+    grid-template-areas: 
+    "certificates__title certificates__title certificates__title" 
+    "certificates__country certificates__year certificates__doctor-photo";
+    justify-items: center;
+    align-items: center;
+}
+
+.certificates__item-title {
+    grid-column: 1/ span 3;
+}
+
+
+
+/*Contacts, Map, Social media*/
+
+.contacts{
+    display:grid;
+    grid-gap: 10px;
+    padding: 10px 10px;
+    grid-template-areas: 
+    "contacts__title"
+    "contacts__address"
+    "map-container" 
+    "contacts__list";
+   
+}
+
+
+@media only screen and (min-width: 768px){
+    .contacts{
+        grid-template-areas: 
+    "contacts__title contacts__title contacts__title contacts__title  contacts__title"
+    "contacts__address contacts__address contacts__address contacts__address contacts__address "
+    " map-container map-container map-container map-container contacts__list" 
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .contacts{
+        grid-template-areas: 
+    ". contacts__title   contacts__title   contacts__title      contacts__title      contacts__title ."
+    ". contacts__address contacts__address contacts__address    contacts__address    contacts__address ."
+    ". map-container     map-container     map-container        map-container     contacts__list ." 
+    }
+}
+
+.contacts__title{
+    grid-area: contacts__title
+}
+.contacts__address{
+    grid-area: contacts__address
+}
+
+.map-container {
+    grid-area: map-container;
+   
+}
+.contacts__list {
+    grid-area: contacts__list;
+    
+}
+
+.contacts__list {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px 0;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: 
+    "contacts__item--lang-one contacts__item--lang-two " 
+    "contacts__item--phone-one contacts__item--phone-one"
+    "contacts__item--phone-two contacts__item--phone-two"
+    "contacts__item--weekdays contacts__item--time"
+    "contacts__item--email contacts__item--email "
+    "contacts__item--facebook contacts__item--instagram"
+    ;
+
+}
+
+@media only screen and (min-width: 736px){
+    .contacts{
+        display:grid;
+        grid-gap: 10px;
+        padding: 10px 10px;
+        grid-template-areas: 
+        "contacts__title"
+        "contacts__address"
+        "map-container" 
+        "contacts__list";
+       
+    }
+    .contacts__list {
+        grid-template-areas: 
+        "contacts__item--lang-one contacts__item--phone-one contacts__item--phone-one contacts__item--weekdays contacts__item--facebook "
+        "contacts__item--lang-two contacts__item--phone-two contacts__item--phone-two contacts__item--time contacts__item--instagram "
+        "  contacts__item--email contacts__item--email contacts__item--email contacts__item--email contacts__item--email"
+       
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    .contacts{
+        display:grid;
+        grid-gap: 10px;
+        padding: 10px 10px;
+        grid-template-areas: 
+        ". contacts__title ."
+        ". contacts__address ."
+        ". map-container ." 
+        ". contacts__list .";
+       
+    }
+
+    .contacts__list {
+        grid-template-areas: 
+        "contacts__item--lang-one contacts__item--phone-one contacts__item--weekdays contacts__item--facebook contacts__item--email"
+        "contacts__item--lang-two contacts__item--phone-two contacts__item--time contacts__item--instagram contacts__item--email"
+       
+    }
+}
+
+
+.contacts__item--lang-one{
+    grid-area: contacts__item--lang-one;
+}
+
+.contacts__item--lang-two{
+    grid-area: contacts__item--lang-two
+}
+
+.contacts__item--phone-one{
+    grid-area: contacts__item--phone-one
+}
+
+.contacts__item--phone-two{
+    grid-area: contacts__item--phone-two
+}
+
+.contacts__item--weekdays{
+    grid-area: contacts__item--weekdays
+}
+.contacts__item--time{
+    grid-area: contacts__item--time
+}
+
+.contacts__item--email{
+    grid-area: contacts__item--email
+}
+
+.contacts__item--facebook{
+    grid-area: contacts__item--facebook
+}
+
+.contacts__item--instagram{
+    grid-area: contacts__item--instagram
+}
+
+
+
+/*Map*/
+.map-container{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;    
+}
+
+/*Footer*/
+.main-footer{
+    display: grid;
+    grid-gap: 15px;
+    padding: 15px;
+}
